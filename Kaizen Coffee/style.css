@@ -1,0 +1,114 @@
+* {
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: .25fr 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1.5fr 1.2fr 0.2fr;
+  grid-template-areas: 
+  "sidebar nav nav nav"
+  "sidebar main main main"
+  "sidebar content1 content2 content3"
+  "sidebar footer footer footer";
+  grid-gap: 0.2rem;
+
+}
+
+nav{
+  background-color: aqua;
+  grid-area: nav;
+  display: flex;
+  
+  
+  
+}
+
+main{
+  background-color: lightskyblue;
+  grid-area: main;
+  
+}
+
+footer{
+  background-color: springgreen;
+  grid-area: footer;
+}
+
+a{
+  color: white;
+}
+
+
+
+#sidebar{
+  background-color: #1a1a1a;
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+    
+}
+
+#content1{
+  background-color: yellow;
+  grid-area: content1;
+}
+
+#content2{
+  background-color: rgb(231, 60, 108);
+  grid-area: content2;
+}
+
+#content3{
+  background-color: rgb(46, 189, 108);
+  grid-area: content3;
+}
+
+/* Border For Logo Yes or NO? */
+
+.logo{
+  display: flex;  
+  block-size: 4.88em;
+  border-color: white;
+  border-style: outset;  
+  border-radius: 10%;
+}
+
+
+.header_nav_links{
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;  
+  background-color: blueviolet;
+  margin-top: auto;  
+  gap: 4em;
+  
+  
+  
+  
+  
+}
+
+.ig_link_image{     
+  width: 50px; 
+  display: flex;  
+  padding-left: 1em;
+  margin-left: 1rem;
+  
+}
+
+a:hover{
+color: black;
+
+}
