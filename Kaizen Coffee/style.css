@@ -27,15 +27,25 @@
 nav{
   background-color: aqua;
   grid-area: nav;
-  display: flex;
-  
-  
-  
+  display: flex;  
 }
 
 main{
-  background-color: lightskyblue;
+  background-color: rgba(34, 38, 41, 0.631);
+  background-image: url(cafe-img-bkg.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   grid-area: main;
+  
+}
+
+.main_content{
+  color: white;
+  
   
 }
 
@@ -93,11 +103,7 @@ a{
   background-color: blueviolet;
   margin-top: auto;  
   gap: 4em;
-  
-  
-  
-  
-  
+
 }
 
 .ig_link_image{     
