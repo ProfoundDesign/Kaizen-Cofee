@@ -14,27 +14,29 @@
   display: grid;
   height: 100vh;
   grid-template-columns: .25fr 1fr 1fr 1fr;
-  grid-template-rows: 0.3fr 1.5fr 1.2fr 0.2fr;
+  grid-template-rows: 0.1fr 1.5fr 1.2fr 0.2fr;
   grid-template-areas: 
   "sidebar nav nav nav"
   "sidebar main main main"
   "sidebar content1 content2 content3"
   "sidebar footer footer footer";
-  grid-gap: 0.2rem;
+  /* grid-gap: 0.2rem; */
 
 }
 
 nav{
-  background-color: aqua;
+  background-color: #1a1a1a;
   grid-area: nav;
   display: flex;  
 }
 
 main{
-  background-color: rgba(34, 38, 41, 0.631);
+  background-color: rgba(0, 0, 1, 0.633);
+  color: white;
   background-image: url(cafe-img-bkg.jpg);
   background-size: cover;
   background-blend-mode: darken;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,10 +45,8 @@ main{
   
 }
 
-.main_content{
-  color: white;
-  
-  
+h1{
+  font-size: 4.5rem;
 }
 
 footer{
@@ -91,27 +91,33 @@ a{
   display: flex;  
   block-size: 4.88em;
   border-color: white;
-  border-style: outset;  
-  border-radius: 10%;
+  /* border-style: outset;   */
+  /* border-radius: 10%; */
 }
 
+/* Need to incorporate header nav links into main bkg img. Change font size/lables/position & add hover animation. Added padding bottom need to remove */
 
 .header_nav_links{
   display: flex;
   justify-content: center;
   flex-grow: 1;  
-  background-color: blueviolet;
+  background-color: #1a1a1a;
   margin-top: auto;  
   gap: 4em;
+  padding-bottom: .5em;
+  
 
 }
+
+/* Added drop shaddow to icons but needs tweaking/Maybe leave for hover effect */
 
 .ig_link_image{     
   width: 50px; 
   display: flex;  
   padding-left: 1em;
   margin-left: 1rem;
-  
+  filter: drop-shadow(5px 5px 10px );
+  color: rgba(176, 216, 178, 0.681);
 }
 
 a:hover{
