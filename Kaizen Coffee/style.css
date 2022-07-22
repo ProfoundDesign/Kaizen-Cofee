@@ -101,19 +101,26 @@ a{
 
 #content1{
   
-  grid-area: content1;
+  background-color: rgba(243, 243, 246, 0.99);
+  background-image: url(espresso-machine.jpg);
+  background-blend-mode: darken;
   
-  display: grid;
-  place-items: center;
-  transform-style: preserve-3d;
+  display: flex;
+  
+  grid-area: content1;  
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-around;  
+  /* transform-style: preserve-3d; */
   
 }
 
 .card1{
-  box-sizing: border-box;
+
+  
   
   min-width: 400px;
-  transform-style: preserve-3d;
+  /* transform-style: preserve-3d; */
 }
 
 .card1:hover .card1__content{
@@ -125,9 +132,10 @@ a{
   position: relative;
   padding: 150px;
   padding-top: 400px;
-  transition: transform 5s;
-  background: pink;
+  transition: transform 2s;
   transform-style: preserve-3d;
+  
+
 }
 
 .card1__front,
@@ -140,35 +148,59 @@ a{
   padding: 2em;
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  /* border-color: rgb(21, 129, 48); */
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: 5%;
+  filter: drop-shadow(5px 5px 5px);
+  
+  
 }
 
 .card1__front{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: lightblue;
+  justify-content: space-around;
+  background: #1a1a1a;
+  color: rgb(233, 243, 232);
+  letter-spacing: 4px;
 }
 
 
 .card1__title{
   font-size: 3rem;
   transform-style: preserve-3d;
-  transform: translateZ(5rem);
+  /* transform: translateZ(1rem); */
+  text-transform: uppercase;
+  
+}
+
+.card1__img{
+  /* transform: translateZ(2rem); */
+  border: 1px;
+  border-radius: 5%;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  filter: drop-shadow(.5px 5px 5px); 
+  
 }
 
 .card1__subtitle{
-  transform: translateZ(4rem);
-  
+  /* transform: translateZ(1rem); */
+  font-size: .75rem;
+  margin-top: 5px;
   
 }
 
 .card1__body{
-  transform: translateZ(3rem);
+  /* transform: translateZ(3rem); */
+  text-transform: uppercase;
 }
 
 .card1__back{
   transform: rotateY(.5turn);
-  background-color: chartreuse;
+  background-color: #1a1a1a;
+  color: white;
 }
 
 
@@ -226,8 +258,3 @@ color: rgba(7, 243, 19, 0.894);
 
 }
 
-#content1{
-  /* background-size: cover; */
-  /* background-image: url(Coffee-type-example.PNG); */
-  /* background-repeat: no-repeat;  */
-}
