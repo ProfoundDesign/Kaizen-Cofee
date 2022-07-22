@@ -1,5 +1,6 @@
 * {
-  font-size: 1.25rem;
+  
+  font-size: 1.175rem;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
@@ -7,44 +8,65 @@
   padding: 0;
   margin: 0;
   flex-shrink: 0;
+  line-height: 1.6;
 }
 
+*,*::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+}
 
 .container {
   display: grid;
-  height: 100vh;
-  width: 100vw;
-  grid-template-columns: .3fr 1fr 1fr 1fr;
-  grid-template-rows: 0.1fr 1.5fr 1.2fr 0.2fr;
+  
+  min-height: 200rem;
+  
+  grid-template-columns: .1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1.2fr 1fr 1fr 1fr .1fr;
   grid-template-areas: 
   "sidebar nav nav nav"
   "sidebar main main main"
   "sidebar content1 content1 content1"
-  "sidebar footer footer footer";
+  "sidebar content2 content2 content2"
+  "sidebar content3 content3 content3"
+  "sidebar footer footer footer"
+  ;
   /* grid-gap: 0.2rem; */
 
 }
 
+body{
+  display: grid;
+  
+  
+}
+
 nav{
-  background-color: #1a1a1a;
+  
   grid-area: nav;
   display: flex;
+  
     
 }
 
 main{
-  background-color: rgba(0, 0, 1, 0.633);
+
   color: white;
-  background-image: url(cafe-img-bkg.jpg);
-  background-size: cover;
-  background-blend-mode: darken;
-  
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center;  
   grid-area: main;
   
+}
+
+main, nav, #header,.header_nav_links {
+  background-image: url(cafe-img-bkg.jpg);
+  background-color: rgba(0, 0, 1, 0.796);
+  background-size: cover;
+  background-attachment: fixed;  
+  background-repeat: no-repeat;
+  background-blend-mode: darken; 
+
 }
 
 h1{
@@ -74,48 +96,115 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
-  
-    
+     
 }
 
 #content1{
-  background-color: yellow;
+  
   grid-area: content1;
+  
+  display: grid;
+  place-items: center;
+  transform-style: preserve-3d;
+  
 }
+
+.card1{
+  box-sizing: border-box;
+  
+  min-width: 400px;
+  transform-style: preserve-3d;
+}
+
+.card1:hover .card1__content{
+  transform: rotateY(.5turn);
+}
+
+.card1__content{
+  text-align: center;
+  position: relative;
+  padding: 150px;
+  padding-top: 400px;
+  transition: transform 5s;
+  background: pink;
+  transform-style: preserve-3d;
+}
+
+.card1__front,
+.card1__back{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2em;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.card1__front{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: lightblue;
+}
+
+
+.card1__title{
+  font-size: 3rem;
+  transform-style: preserve-3d;
+  transform: translateZ(5rem);
+}
+
+.card1__subtitle{
+  transform: translateZ(4rem);
+  
+  
+}
+
+.card1__body{
+  transform: translateZ(3rem);
+}
+
+.card1__back{
+  transform: rotateY(.5turn);
+  background-color: chartreuse;
+}
+
+
 
 #content2{
   background-color: rgb(231, 60, 108);
-  /* grid-area: content2; */
+  grid-area: content2;
 }
 
 #content3{
   background-color: rgb(46, 189, 108);
-  /* grid-area: content3; */
+  grid-area: content3;
 }
 
 /* Border For Logo Yes or NO? */
 
 .logo{
   /* display: flex;   */
-  block-size: 4.88em;
+  block-size: 5rem; 
   
-  /* border-color: white; */
-  /* border-style: outset;   */
-  /* border-radius: 10%; */
+  padding-top: .5rem;
+
 }
 
-/* Need to incorporate header nav links into main bkg img. Change font size/lables/position & add hover animation. Added padding bottom need to remove */
+/*  Change font size/lables/position & add hover animation. Added padding bottom need to remove */
 
 .header_nav_links{
   display: flex;
   justify-content: end;
   flex-grow: 1;  
-  background-color: #1a1a1a;
+  
   gap: 2em;
-  padding-top: 1em;
+  padding-top: 2em;
   padding-bottom: .5em;
   padding-right: 5em;
+  
   
   
 
@@ -124,7 +213,7 @@ a{
 /* Added drop shaddow to icons but needs tweaking/Maybe leave for hover effect */
 
 .ig_link_image{     
-  width: 50px; 
+  width: 3rem; 
   display: flex;  
   padding-left: 1em;
   margin-left: 1rem;
@@ -133,13 +222,12 @@ a{
 }
 
 a:hover{
-color: black;
+color: rgba(7, 243, 19, 0.894);
 
 }
 
 #content1{
-  background-size: 100%;
-  background-image: url(Coffee-type-example.PNG);
-  background-repeat: no-repeat;
-  
+  /* background-size: cover; */
+  /* background-image: url(Coffee-type-example.PNG); */
+  /* background-repeat: no-repeat;  */
 }
